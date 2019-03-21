@@ -1,5 +1,14 @@
 README.md
 
+# 【ユニティちゃんトゥーンシェーダー CustomPerspective対応版】
+
+## 【このリポジトリについて】
+[CustomPerspective](https://github.com/Waseda-CG-Library/UnityCustomPerspective)の検証のため、
+[ユニティちゃんトゥーンシェーダー](https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project)を
+ForkしてCustomPerspective用にカスタマイズしたものです。
+
+以下、Fork元のREADMEです。
+
 # 【ユニティちゃんトゥーンシェーダー Ver.2.0.6】
 「ユニティちゃんトゥーンシェーダー」は、セル風3DCGアニメーションの制作現場での要望に応えるような形で設計された、映像志向のトゥーンシェーダーです。  
 
