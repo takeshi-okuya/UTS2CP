@@ -12,6 +12,8 @@
 // #pragma multi_compile _IS_OUTLINE_CLIPPING_NO _IS_OUTLINE_CLIPPING_YES 
 // _IS_OUTLINE_CLIPPING_YESは、Clippigマスクを使用するシェーダーでのみ使用できる. OutlineのブレンドモードにBlend SrcAlpha OneMinusSrcAlphaを追加すること.
 //
+#include "../../_CustomPerspective/Shaders/CustomPerspective.cginc"
+
             uniform float4 _LightColor0;
             uniform float4 _BaseColor;
             //v.2.0.5
@@ -77,11 +79,11 @@
 //v2.0.4
 #ifdef _OUTLINE_NML
                 //v.2.0.4.3 baked Normal Texture for Outline                
-                o.pos = UnityObjectToClipPos(lerp(float4(v.vertex.xyz + v.normal*Set_Outline_Width,1), float4(v.vertex.xyz + _BakedNormalDir*Set_Outline_Width,1),_Is_BakedNormal));
+                o.pos = ObjectToCustomClipPos(lerp(float4(v.vertex.xyz + v.normal*Set_Outline_Width,1), float4(v.vertex.xyz + _BakedNormalDir*Set_Outline_Width,1),_Is_BakedNormal));
 #elif _OUTLINE_POS
                 Set_Outline_Width = Set_Outline_Width*2;
                 float signVar = dot(normalize(v.vertex),normalize(v.normal))<0 ? -1 : 1;
-                o.pos = UnityObjectToClipPos(float4(v.vertex.xyz + signVar*normalize(v.vertex)*Set_Outline_Width, 1));
+                o.pos = ObjectToCustomClipPos(float4(v.vertex.xyz + signVar*normalize(v.vertex)*Set_Outline_Width, 1));
 #endif
                 o.pos.z = o.pos.z + _Offset_Z*viewDirectionVP.z;
                 return o;

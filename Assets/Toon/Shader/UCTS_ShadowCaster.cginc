@@ -6,6 +6,8 @@
 //(C)Unity Technologies Japan/UCL
 //#pragma multi_compile _IS_CLIPPING_OFF _IS_CLIPPING_MODE  _IS_CLIPPING_TRANSMODE
 //
+#include "../../_CustomPerspective/Shaders/CustomPerspective.cginc"
+
 #ifdef _IS_CLIPPING_MODE
 //_Clipping
             uniform sampler2D _ClippingMask; uniform float4 _ClippingMask_ST;
@@ -56,8 +58,15 @@
 #elif _IS_CLIPPING_OFF
 //Default
 #endif
-                o.pos = UnityObjectToClipPos( v.vertex );
+                o.pos = ObjectToCustomClipPos( v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
+
+#ifdef CUSTOM_PERSPECTIVE_ON
+                if (!any(unity_LightShadowBias)) //DepthTexture
+                {
+                    o.pos = ObjectToCustomClipPos(v.vertex);
+                }
+#endif
                 return o;
             }
             float4 frag(VertexOutput i) : SV_TARGET {

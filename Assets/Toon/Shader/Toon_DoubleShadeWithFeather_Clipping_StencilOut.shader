@@ -174,6 +174,8 @@ Shader "UnityChanToonShader/Toon_DoubleShadeWithFeather_Clipping_StencilOut" {
             //V.2.0.4
             #pragma multi_compile _IS_OUTLINE_CLIPPING_YES 
             #pragma multi_compile _OUTLINE_NML _OUTLINE_POS
+            //CustomPerspective
+            #pragma multi_compile _ CUSTOM_PERSPECTIVE_ON
             //アウトライン処理は以下のUCTS_Outline.cgincへ.
             #include "UCTS_Outline.cginc"
             ENDCG
@@ -208,6 +210,8 @@ Shader "UnityChanToonShader/Toon_DoubleShadeWithFeather_Clipping_StencilOut" {
             //v.2.0.4
             #pragma multi_compile _IS_CLIPPING_MODE
             #pragma multi_compile _IS_PASS_FWDBASE
+            //CustomPerspective
+            #pragma multi_compile _ CUSTOM_PERSPECTIVE_ON
             #include "UCTS_DoubleShadeWithFeather.cginc"
 
             ENDCG
@@ -243,6 +247,8 @@ Shader "UnityChanToonShader/Toon_DoubleShadeWithFeather_Clipping_StencilOut" {
             //v.2.0.4
             #pragma multi_compile _IS_CLIPPING_MODE
             #pragma multi_compile _IS_PASS_FWDDELTA
+            //CustomPerspective
+            #pragma multi_compile _ CUSTOM_PERSPECTIVE_ON
             #include "UCTS_DoubleShadeWithFeather.cginc"
 
             ENDCG
@@ -268,6 +274,8 @@ Shader "UnityChanToonShader/Toon_DoubleShadeWithFeather_Clipping_StencilOut" {
             #pragma target 3.0
             //v.2.0.4
             #pragma multi_compile _IS_CLIPPING_MODE
+            //CustomPerspective
+            #pragma multi_compile _ CUSTOM_PERSPECTIVE_ON
             #include "UCTS_ShadowCaster.cginc"
             ENDCG
         }

@@ -7,6 +7,7 @@
 //#pragma multi_compile _IS_CLIPPING_OFF _IS_CLIPPING_MODE  _IS_CLIPPING_TRANSMODE
 //#pragma multi_compile _IS_PASS_FWDBASE _IS_PASS_FWDDELTA
 //
+            #include "../../_CustomPerspective/Shaders/CustomPerspective.cginc"
 
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float4 _BaseColor;
@@ -142,7 +143,7 @@
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = UnityObjectToClipPos( v.vertex );
+                o.pos = ObjectToCustomClipPos( v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
