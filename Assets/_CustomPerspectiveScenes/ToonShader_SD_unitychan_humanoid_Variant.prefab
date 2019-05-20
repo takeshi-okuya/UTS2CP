@@ -139,7 +139,7 @@ MonoBehaviour:
   PointOfView: {fileID: 0}
   FocalLength: 50
   VanishingPoint: {fileID: 1796591516}
-  Focus: {fileID: 0}
+  Focus: {fileID: 4561019806450507322}
 --- !u!114 &4091140251495471194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customPerspectiveModel: {fileID: 5094141317585067119}
+--- !u!1 &8972613820421037853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4561019806450507322}
+  - component: {fileID: 2076158550969434790}
+  m_Layer: 0
+  m_Name: PRP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4561019806450507322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8972613820421037853}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -8.881784e-16, y: 0.41803354, z: 0.049120314}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 3138572414013901113}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &2076158550969434790
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8972613820421037853}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: -8.881784e-16, y: 0.41803354, z: 0.049120314}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 3138572414013904589}
+    weight: 1
 --- !u!1001 &3138572414013933449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313,6 +363,12 @@ GameObject:
 --- !u!4 &3138572414013901113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495280, guid: c353389ce56ddc54eafaf9b12ab56de1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3138572414013933449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3138572414013904589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 495940, guid: c353389ce56ddc54eafaf9b12ab56de1,
     type: 3}
   m_PrefabInstance: {fileID: 3138572414013933449}
   m_PrefabAsset: {fileID: 0}

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tile_x4
+  m_Name: Tile_Orange_x4
   m_Shader: {fileID: 4800000, guid: a5f6ee7c4bf094e49b223d4fe34b7ddc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

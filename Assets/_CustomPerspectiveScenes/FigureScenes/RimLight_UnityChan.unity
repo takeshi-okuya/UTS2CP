@@ -179,11 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3138572414023467853, guid: f0f36d3622c680d47885832939dbbc8f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5094141317585067119, guid: f0f36d3622c680d47885832939dbbc8f,
         type: 3}
       propertyPath: VanishingPoint
@@ -219,10 +214,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.56
       objectReference: {fileID: 0}
-    - target: {fileID: 1796591516, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1796591520, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -232,6 +223,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1796591517, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796591516, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561019806450507322, guid: f0f36d3622c680d47885832939dbbc8f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561019806450507322, guid: f0f36d3622c680d47885832939dbbc8f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.04912034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138572414023467853, guid: f0f36d3622c680d47885832939dbbc8f,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -574,7 +584,7 @@ GameObject:
   - component: {fileID: 1911632499}
   - component: {fileID: 1911632498}
   m_Layer: 0
-  m_Name: PointOfView
+  m_Name: VirtualViewpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
