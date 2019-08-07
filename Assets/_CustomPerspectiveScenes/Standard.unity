@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028337, g: 0.2257132, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 115151985}
   - component: {fileID: 115151984}
   - component: {fileID: 115151983}
-  - component: {fileID: 115151982}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -133,19 +132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &115151982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115151981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcd7bd1820e5d54596074decb891c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customPerspectiveModel: {fileID: 115151983}
 --- !u!114 &115151983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,13 +144,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d5d87c01406b459cb0e7cbde8af76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Meshes:
+  - {fileID: 115151985}
   EmphasisType: 0
   PointOfView: {fileID: 0}
   FocalLength: 50
   VanishingPoint: {fileID: 1303691956}
   Focus: {fileID: 0}
-  correctShadow: 1
-  correctRimLight: 1
+  CorrectShadow: 1
+  CorrectRimLight: 1
 --- !u!65 &115151984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -344,7 +332,6 @@ GameObject:
   - component: {fileID: 409945051}
   - component: {fileID: 409945050}
   - component: {fileID: 409945055}
-  - component: {fileID: 409945054}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -425,19 +412,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &409945054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409945049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcd7bd1820e5d54596074decb891c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customPerspectiveModel: {fileID: 409945055}
 --- !u!114 &409945055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,13 +424,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d5d87c01406b459cb0e7cbde8af76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Meshes:
+  - {fileID: 409945051}
   EmphasisType: 0
   PointOfView: {fileID: 0}
   FocalLength: 50
   VanishingPoint: {fileID: 1590205071}
   Focus: {fileID: 0}
-  correctShadow: 1
-  correctRimLight: 1
+  CorrectShadow: 1
+  CorrectRimLight: 1
 --- !u!1 &765575726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1671723304
 Light:
   m_ObjectHideFlags: 0

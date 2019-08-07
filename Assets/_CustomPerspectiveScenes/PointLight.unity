@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 115151985}
   - component: {fileID: 115151984}
   - component: {fileID: 115151983}
-  - component: {fileID: 115151982}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -133,19 +132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &115151982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115151981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcd7bd1820e5d54596074decb891c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customPerspectiveModel: {fileID: 115151983}
 --- !u!114 &115151983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,13 +144,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d5d87c01406b459cb0e7cbde8af76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Meshes:
+  - {fileID: 115151985}
   EmphasisType: 0
   PointOfView: {fileID: 0}
   FocalLength: 50
   VanishingPoint: {fileID: 1303691956}
   Focus: {fileID: 0}
-  correctShadow: 1
-  correctRimLight: 1
+  CorrectShadow: 1
+  CorrectRimLight: 1
 --- !u!65 &115151984
 BoxCollider:
   m_ObjectHideFlags: 0
