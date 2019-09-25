@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1796591518, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
+      propertyPath: EmphasisType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1796591517, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -225,6 +229,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04912034
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796591516, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796591516, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0f36d3622c680d47885832939dbbc8f, type: 3}
@@ -450,6 +462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc006acbcd0040746ae5cfe33f5eacb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viewVolumeScale: 1
+  projectSettingPath: 0
 --- !u!4 &1071401983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1796591516, guid: f0f36d3622c680d47885832939dbbc8f,
@@ -905,7 +919,6 @@ GameObject:
   - component: {fileID: 1982705556}
   - component: {fileID: 1982705555}
   - component: {fileID: 1982705554}
-  - component: {fileID: 1982705553}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -913,19 +926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1982705553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982705552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcd7bd1820e5d54596074decb891c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customPerspectiveModel: {fileID: 1982705554}
 --- !u!114 &1982705554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,11 +938,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d5d87c01406b459cb0e7cbde8af76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Meshes:
+  - {fileID: 1982705556}
   EmphasisType: 1
   PointOfView: {fileID: 0}
   FocalLength: 50
   VanishingPoint: {fileID: 2105014503}
   Focus: {fileID: 0}
+  CorrectShadow: 1
+  CorrectRimLight: 1
 --- !u!65 &1982705555
 BoxCollider:
   m_ObjectHideFlags: 0
