@@ -277,6 +277,10 @@
                 float3 Set_RimLight = (saturate((_Set_RimLightMask_var.g+_Tweak_RimLightMaskLevel))*lerp( _LightDirection_MaskOn_var, (_LightDirection_MaskOn_var+(lerp( _Ap_RimLightColor.rgb, (_Ap_RimLightColor.rgb*Set_LightColor), _Is_LightColor_Ap_RimLight )*saturate((lerp( (0.0 + ( (_ApRimLightPower_var - _RimLight_InsideMask) * (1.0 - 0.0) ) / (1.0 - _RimLight_InsideMask)), step(_RimLight_InsideMask,_ApRimLightPower_var), _Ap_RimLight_FeatherOff )-(saturate(_VertHalfLambert_var)+_Tweak_LightDirection_MaskLevel))))), _Add_Antipodean_RimLight ));
                 //Composition: HighColor and RimLight as _RimLight_var
                 float3 _RimLight_var = lerp( Set_HighColor, (Set_HighColor+Set_RimLight), _RimLight );
+
+				//return float4(0, 0, 0, 0);
+				//return float4(Set_RimLight, 1.0f);
+
                 //Matcap
                 //v.2.0.6 : CameraRolling Stabilizer
                 //鏡スクリプト判定：_sign_Mirror = -1 なら、鏡の中と判定.

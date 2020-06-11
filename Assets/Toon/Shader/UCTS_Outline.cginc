@@ -71,6 +71,7 @@
                 float3 _BakedNormalDir = normalize(mul(_BakedNormal_var.rgb, tangentTransform));
                 //ここまで.
                 float Set_Outline_Width = (_Outline_Width*0.001*smoothstep( _Farthest_Distance, _Nearest_Distance, distance(objPos.rgb,_WorldSpaceCameraPos) )*_Outline_Sampler_var.rgb).r;
+				//Set_Outline_Width = 0;
                 //v.2.0.4.2 for VRChat mirror object without normalize()
                 o.pos = UnityObjectToClipPos(v.vertex); //v.2.0.7
                 float3 viewDirection = _WorldSpaceCameraPos.xyz - o.pos.xyz;
